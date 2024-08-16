@@ -6,7 +6,7 @@
 #    By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/15 21:41:06 by kyusulee          #+#    #+#              #
-#    Updated: 2024/08/16 16:15:15 by kyusulee         ###   ########.fr        #
+#    Updated: 2024/08/16 19:23:04 by kyusulee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,11 @@ SRCS	=	./PhoneBook.cpp	\
 OBJS	=	$(SRCS:.cpp=.o)
 
 CC		=	c++
-CFLANG	=	-Wall -Wextra -Werror -std=c++98
+CFLAG	=	-Wall -Wextra -Werror -std=c++98
 
-ECHO	= echo
-PRINTF	= printf
-RM		= rm -f
+ECHO	=	echo
+PRINTF	= 	printf
+RM		= 	rm -f
 
 all		:
 			@$(MAKE) $(NAME)
@@ -32,7 +32,7 @@ all		:
 
 $(NAME)	:	$(OBJS) $(HEAD)
 			@$(PRINTF) " 100%% compiling complete.$(DEFAULT)\n"
-			$(CC) $(CFLAG) -I./ $(OBJS) -o $(NAME)
+			@$(CC) $(CFLAG) -I./ $(OBJS) -o $(NAME)
 			@$(ECHO) "$(CYAN) *** Linking complete.$(DEFAULT)"
 
 clean	:
@@ -52,7 +52,7 @@ re		:
 
 %.o		:	%.c
 			@$(PRINTF) "$(GREEN)#"
-			$(CC) $(CFLAG) -I./ -c $^ -o $@
+			@$(CC) $(CFLAG) -I./ -c $^ -o $@
 
 .PHONY: all clean fclean re
 

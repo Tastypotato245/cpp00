@@ -6,7 +6,7 @@
 #    By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/15 21:41:06 by kyusulee          #+#    #+#              #
-#    Updated: 2024/08/15 22:05:01 by kyusulee         ###   ########.fr        #
+#    Updated: 2024/08/16 19:23:20 by kyusulee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,11 @@ SRCS	=	./megaphone.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 
 CC		=	c++
-CFLANG = -Wall -Wextra -Werror -std=c++98
+CFLAG	=	-Wall -Wextra -Werror -std=c++98
 
-ECHO	= echo
-PRINTF	= printf
-RM		= rm -f
+ECHO	=	echo
+PRINTF	=	printf
+RM		=	rm -f
 
 all		:
 			@$(MAKE) $(NAME)
