@@ -6,7 +6,7 @@
 /*   By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 13:21:26 by kyusulee          #+#    #+#             */
-/*   Updated: 2024/08/16 16:18:36 by kyusulee         ###   ########.fr       */
+/*   Updated: 2024/08/17 15:01:53 by kyusulee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,7 +144,7 @@ void	PhoneBook::AddContact()
 							darkest_secret
 						);
 	m_insert_idx = (m_insert_idx + 1) % MAX_SIZE;
-	m_size = m_size + ((m_size <= MAX_SIZE) ? 1 : 0);
+	m_size = m_size + ((m_size < MAX_SIZE) ? 1 : 0);
 }
 
 /**
